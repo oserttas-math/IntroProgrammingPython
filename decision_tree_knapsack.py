@@ -75,10 +75,12 @@ def maxVal(toConsider, avail):
     else:
         nextItem = toConsider[0]
         #Explore left branch
+        # Where you will have the element 'a'
         withVal, withToTake = maxVal(toConsider[1:],
                                      avail - nextItem.getCost())
         withVal += nextItem.getValue()
         #Explore right branch
+        # Where you will not have the element 'a'
         withoutVal, withoutToTake = maxVal(toConsider[1:], avail)
         #Choose better branch
         if withVal > withoutVal:
@@ -101,6 +103,8 @@ values = [6, 7, 8, 9]
 weights = [3, 3, 2, 5]
 letters = buildMenu(names, values, weights)
 
-testGreedys(letters, 750)
+testGreedys(letters, 5)
 print('')
-testMaxVal(letters, 750)
+print('Best Result from Tree')
+print('')
+testMaxVal(letters, 5)
