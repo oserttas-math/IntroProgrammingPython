@@ -1,0 +1,30 @@
+'''
+‘key’ which takes a function as its value. This key function transforms
+each element before sorting, it takes the value and returns 1 value which is
+then used within sort instead of the original value.
+# Sort a list of integers based on
+# their remainder on dividing from 7
+
+def func(x):
+    return x % 7
+
+L = [15, 3, 11, 7]
+
+print "Normal sort :", sorted(L)
+print "Sorted with key:", sorted(L, key = func)
+
+Output :
+Normal sort : [3, 7, 11, 15]
+Sorted with key: [7, 15, 3, 11]
+
+L = ["cccc", "b", "dd", "aaa"]
+
+print "Normal sort :", sorted(L)
+
+print "Sort with len :", sorted(L, key = len)
+
+Output :
+Normal sort : ['aaa', 'b', 'cccc', 'dd']
+Sort with len : ['b', 'dd', 'aaa', 'cccc']
+
+'''
