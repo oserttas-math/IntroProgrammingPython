@@ -3,7 +3,7 @@
 11/11/18 // oserttas-math
 ///////////////////////////
 Content :
-Brute for optimaztion for knapsack problem
+Brute force optimaztion for knapsack problem
 Source:
 Introduction to Computation and Programming Using Python
 by John Guttag
